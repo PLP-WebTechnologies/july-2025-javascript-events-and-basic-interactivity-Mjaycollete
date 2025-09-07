@@ -1,0 +1,139 @@
+<!-- ===== index.html (Dental Hygiene Version) ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dental Hygiene</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1> Dental Hygiene</h1>
+    <div class="controls">
+      <button id="theme-toggle" aria-pressed="false">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Counter Section -->
+    <section id="counter-section" class="card">
+      <h2>Daily Brushing Tracker</h2>
+      <p>Track how many times you’ve brushed today! Click <strong>+</strong> every time you brush and <strong>-</strong> if you want to adjust. Reset at the end of the day.</p>
+      <div class="counter-display" id="counter-display">0</div>
+      <div class="counter-controls">
+        <button id="decrement">-</button>
+        <button id="increment">+</button>
+        <button id="reset">Reset</button>
+      </div>
+      <p class="hint">You can also use keyboard: <kbd>-</kbd> and <kbd>+</kbd> (or press <kbd>R</kbd> to reset)</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq-section" class="card">
+      <h2>Dental Hygiene FAQ</h2>
+      <div class="faq">
+        <button class="faq-question" aria-expanded="false">How often should I brush my teeth?</button>
+        <div class="faq-answer">Brush at least twice a day, morning and night, using fluoride toothpaste.</div>
+
+        <button class="faq-question" aria-expanded="false">Is flossing really necessary?</button>
+        <div class="faq-answer">Yes! Flossing removes plaque and food particles that brushing alone can’t reach.</div>
+
+        <button class="faq-question" aria-expanded="false">How can I prevent tooth decay?</button>
+        <div class="faq-answer">Limit sugary snacks, rinse after meals, and maintain regular dental check-ups.</div>
+      </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section id="tabs-section" class="card">
+      <h2>Dental Tips by Category</h2>
+      <div class="tabs">
+        <nav class="tabs-nav">
+          <button class="tab-btn active" data-tab="tab1">Brushing Tips</button>
+          <button class="tab-btn" data-tab="tab2">Flossing Tips</button>
+          <button class="tab-btn" data-tab="tab3">Diet & Teeth</button>
+        </nav>
+        <div class="tab-content active" id="tab1">Use a soft-bristled brush, gentle circular motions, and brush for 2 minutes.</div>
+        <div class="tab-content" id="tab2">Floss once a day, slide gently between teeth, and clean beneath the gumline.</div>
+        <div class="tab-content" id="tab3">Eat calcium-rich foods, avoid excessive sugar, and drink water to maintain healthy teeth.</div>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section id="form-section" class="card">
+      <h2>Dental Hygiene Survey</h2>
+      <p>Please fill out this short survey about your dental hygiene habits. All fields are required except website.</p>
+      <form id="signup-form" novalidate>
+        <label>
+          Full name
+          <input type="text" id="name" name="name" />
+          <small class="error" id="name-error"></small>
+        </label>
+
+        <label>
+          Email
+          <input type="email" id="email" name="email" />
+          <small class="error" id="email-error"></small>
+        </label>
+
+        <label>
+          Password
+          <input type="password" id="password" name="password" />
+          <small class="error" id="password-error"></small>
+        </label>
+
+        <label>
+          Confirm Password
+          <input type="password" id="confirm-password" name="confirm-password" />
+          <small class="error" id="confirm-password-error"></small>
+        </label>
+
+        <label>
+          Age
+          <input type="number" id="age" name="age" />
+          <small class="error" id="age-error"></small>
+        </label>
+
+        <label>
+          Website (optional)
+          <input type="url" id="website" name="website" />
+          <small class="error" id="website-error"></small>
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="terms" name="terms" />
+          I confirm I follow regular dental hygiene habits
+          <small class="error" id="terms-error"></small>
+        </label>
+
+        <button type="submit">Submit</button>
+        <div id="form-success" class="success" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <!-- Dropdown Section -->
+    <section id="dropdown-section" class="card">
+      <h2>Select Your Favorite Dental Care Tip</h2>
+      <div class="dropdown" id="my-dropdown">
+        <button class="drop-btn" id="drop-btn">Options ▾</button>
+        <ul class="drop-list" id="drop-list" hidden>
+          <li><button class="drop-item">Brush twice daily</button></li>
+          <li><button class="drop-item">Floss daily</button></li>
+          <li><button class="drop-item">Use mouthwash</button></li>
+          <li><button class="drop-item">Schedule dental checkups</button></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Dental Hygiene 2025. All rights reserved.</p>
+   </footer>
+
+
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>
